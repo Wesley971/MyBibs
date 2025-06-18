@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, FlatList, View, Alert } from "react-native";
 import { List, IconButton, Text } from "react-native-paper";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../navigation/AppNavigator";
+import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
+import type { TabParamList } from "../navigation/AppNavigator"; 
 import { getBottles, deleteBottle } from "../storage/bottleStorage";
 import ScreenWrapper from "../components/ScreenWrapper";
 
 type HistoryScreenProps = {
-  navigation: StackNavigationProp<RootStackParamList, "Historique">;
+  navigation: BottomTabNavigationProp<TabParamList, "Historique">;
 };
+
 
 type Bottle = {
   id: number;

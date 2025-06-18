@@ -16,4 +16,12 @@ export default function AppNavigator() {
       <Tab.Screen name="Statistiques" component={StatsScreen} />
     </Tab.Navigator>
   );
+  
 }
+export type TabParamList = {
+  Ajouter: undefined;
+  Historique: undefined;
+  Scanner: undefined;
+  Statistiques: undefined;
+};
+

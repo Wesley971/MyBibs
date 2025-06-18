@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { Button, TextInput, Card, Snackbar, useTheme } from "react-native-paper";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../navigation/AppNavigator";
+import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import type { TabParamList } from "../navigation/AppNavigator";
 import { saveBottle } from "../storage/bottleStorage";
 import ScreenWrapper from "../components/ScreenWrapper";
 
 type AddBottleScreenProps = {
-  navigation: StackNavigationProp<RootStackParamList, "Ajout">;
+  navigation: BottomTabNavigationProp<TabParamList, "Ajouter">;
 };
+
 
 type SnackbarType = 'error' | 'success';
 
